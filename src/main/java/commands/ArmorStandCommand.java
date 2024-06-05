@@ -22,6 +22,6 @@ public class ArmorStandCommand implements CommandExecutor {
             plugin.openMainMenu(player);
         }
 
-        return false;
+        return true;
     }
 }

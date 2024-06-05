@@ -34,6 +34,7 @@ public class MenuHandler implements Listener {
                     player.sendMessage("Opened Armor Stand Create Menu");
                     player.closeInventory();
                     //Open Armor Stand Inventory
+                    plugin.openCreateMenu(player);
                     break;
                 case BARRIER:
                     player.sendMessage("Closing Main Menu");
