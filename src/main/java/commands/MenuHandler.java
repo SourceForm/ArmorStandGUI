@@ -1,5 +1,6 @@
 package commands;
 
+import me.sourceform.armorstandguis.ArmorStandGUIs;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.NamespacedKey;
@@ -13,6 +14,12 @@ import java.net.InetSocketAddress;
 import java.util.concurrent.CompletableFuture;
 
 public class MenuHandler implements Listener {
+
+    ArmorStandGUIs plugin;
+
+    public MenuHandler(ArmorStandGUIs plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent e){
