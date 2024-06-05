@@ -1,0 +1,12 @@
+name: ArmorStandGUIs
+version: '${project.version}'
+main: me.sourceform.armorstandguis.ArmorStandGUIs
+api-version: '1.20'
+authors: [SourceForm]
+description: Creates a GUI to make armor stands
+commands:
+  armorstand:
+    description: Create a armor stand
+    usage: /<command>
+    aliases:
+      - as
