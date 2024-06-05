@@ -46,4 +46,25 @@ public final class ArmorStandGUIs extends JavaPlugin {
         player.openInventory(main_menu);
 
     }
+
+    public void openCreateMenu(Player player){
+        Inventory create_menu = Bukkit.createInventory(player, 9, ChatColor.GREEN + "Create an Armor Stand");
+
+        ItemStack arms = new ItemStack(Material.ARMOR_STAND);
+        ItemStack glow = new ItemStack(Material.BEACON);
+        ItemStack armor = new ItemStack(Material.DIAMOND_CHESTPLATE);
+        ItemStack base = new ItemStack(Material.STONE_SLAB);
+        ItemStack complete = new ItemStack(Material.GREEN_WOOL);
+        ItemStack cancel = new ItemStack(Material.RED_WOOL);
+
+        create_menu.setItem(0, arms);
+        create_menu.setItem(1, glow);
+        create_menu.setItem(2, armor);
+        create_menu.setItem(3, base);
+        create_menu.setItem(6, complete);
+        create_menu.setItem(7, cancel);
+
+        player.openInventory(create_menu);
+
+    }
 }
