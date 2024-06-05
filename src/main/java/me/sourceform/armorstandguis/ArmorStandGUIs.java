@@ -57,12 +57,33 @@ public final class ArmorStandGUIs extends JavaPlugin {
         ItemStack complete = new ItemStack(Material.GREEN_WOOL);
         ItemStack cancel = new ItemStack(Material.RED_WOOL);
 
+        ItemMeta arms_meta = arms.getItemMeta();
+        ItemMeta glow_meta = glow.getItemMeta();
+        ItemMeta armor_meta = armor.getItemMeta();
+        ItemMeta base_meta = base.getItemMeta();
+        ItemMeta complete_meta = complete.getItemMeta();
+        ItemMeta cancel_meta = cancel.getItemMeta();
+
+        arms_meta.setDisplayName(ChatColor.AQUA + "Arms");
+        glow_meta.setDisplayName(ChatColor.AQUA + "Glow");
+        armor_meta.setDisplayName(ChatColor.AQUA + "Armor");
+        base_meta.setDisplayName(ChatColor.AQUA + "Base Material");
+        complete_meta.setDisplayName(ChatColor.DARK_GREEN + "Complete");
+        cancel_meta.setDisplayName(ChatColor.RED + "Cancel");
+
+        arms.setItemMeta(arms_meta);
+        glow.setItemMeta(glow_meta);
+        armor.setItemMeta(armor_meta);
+        base.setItemMeta(base_meta);
+        complete.setItemMeta(complete_meta);
+        cancel.setItemMeta(cancel_meta);
+
         create_menu.setItem(0, arms);
         create_menu.setItem(1, glow);
         create_menu.setItem(2, armor);
         create_menu.setItem(3, base);
-        create_menu.setItem(6, complete);
-        create_menu.setItem(7, cancel);
+        create_menu.setItem(7, complete);
+        create_menu.setItem(8, cancel);
 
         player.openInventory(create_menu);
 
